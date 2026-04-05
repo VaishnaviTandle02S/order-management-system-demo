@@ -8,13 +8,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean install'
+                bat 'mvn clean install'
             }
         }
 
         stage('Run') {
             steps {
-                sh 'java -jar target/*.jar'
+                bat 'java -jar target\\*.jar'
             }
         }
     }
